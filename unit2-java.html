@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Java Programming Unit 2 | MCA Study Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">MCA Study Hub</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="notes.html">Notes</a>
+            <a href="semester1-notes.html">Semester 1</a>
+            <a href="java-programming.html">Java</a>
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <section class="page-header">
+
+            <h1>Java Programming - Unit 2</h1>
+
+            <p>
+                Object-Oriented Programming in Java
+            </p>
+
+        </section>
+
+
+        <section class="notes-content">
+
+
+            <!-- ================================================= -->
+            <!-- 1. CLASS FUNDAMENTALS -->
+            <!-- ================================================= -->
+
+            <div class="note-section">
+
+                <h2>1. Class Fundamentals</h2>
+
+
+                <h3>What is a Class?</h3>
+
+                <p>
+                    A class is a blueprint or template used to create objects
+                    in Java. It defines the data and behavior that objects
+                    created from the class can have.
+                </p>
+
+                <p>
+                    A class generally contains variables and methods.
+                    Variables represent the data or state of an object,
+                    while methods represent the behavior or actions of
+                    an object.
+                </p>
+
+
+                <h3>Basic Structure of a Class</h3>
+
+                <p>
+                    The general structure of a Java class is:
+                </p>
+
+                <pre><code>
+class ClassName {
+
+    // Variables
+
+    // Methods
+
+}
+                </code></pre>
+
+
+                <p>
+                    Example:
+                </p>
+
+                <pre><code>
+class Student {
+
+    String name;
+    int age;
+
+    void display() {
+        System.out.println(name);
+        System.out.println(age);
+    }
+
+}
+                </code></pre>
+
+
+                <p>
+                    In this example, <code>Student</code> is the class,
+                    <code>name</code> and <code>age</code> are variables,
+                    and <code>display()</code> is a method.
+                </p>
+
+
+                <h3>Components of a Class</h3>
+
+                <p>
+                    A Java class can contain different components such as:
+                </p>
+
+                <ul>
+                    <li>Variables</li>
+                    <li>Methods</li>
+                    <li>Constructors</li>
+                    <li>Static and non-static blocks</li>
+                    <li>Nested classes and interfaces</li>
+                </ul>
+
+
+                <h3>Variable Declaration</h3>
+
+                <p>
+                    Variables declared inside a class are used to store
+                    data. They can represent the state of an object or
+                    information associated with the class.
+                </p>
+
+                <pre><code>
+class Student {
+
+    String name;
+    int age;
+
+}
+                </code></pre>
+
+
+                <p>
+                    Here, <code>name</code> and <code>age</code> are
+                    variables declared inside the <code>Student</code>
+                    class.
+                </p>
+
+
+                <h3>Method Declaration</h3>
+
+                <p>
+                    A method is a block of code that performs a particular
+                    task. Methods define the behavior of a class or object.
+                </p>
+
+                <p>
+                    General syntax:
+                </p>
+
+                <pre><code>
+returnType methodName(parameters) {
+
+    // statements
+
+}
+                </code></pre>
+
+
+                <p>
+                    Example:
+                </p>
+
+                <pre><code>
+class Student {
+
+    void display() {
+
+        System.out.println("Student Details");
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Modifiers</h3>
+
+                <p>
+                    Modifiers are keywords used to control the accessibility,
+                    behavior, or properties of classes, variables and methods.
+                </p>
+
+                <p>
+                    The syllabus covers two major categories:
+                </p>
+
+                <ul>
+                    <li>Access Modifiers</li>
+                    <li>Other Modifiers</li>
+                </ul>
+
+
+                <h3>Access Modifiers</h3>
+
+                <p>
+                    Access modifiers control where a class member can be
+                    accessed.
+                </p>
+
+                <h3>1. private</h3>
+
+                <p>
+                    A private member can be accessed within the class in
+                    which it is declared.
+                </p>
+
+                <pre><code>
+class Student {
+
+    private int age;
+
+}
+                </code></pre>
+
+
+                <h3>2. protected</h3>
+
+                <p>
+                    A protected member provides access within the class
+                    and also supports access through inheritance.
+                </p>
+
+                <pre><code>
+class Student {
+
+    protected int age;
+
+}
+                </code></pre>
+
+
+                <h3>3. public</h3>
+
+                <p>
+                    A public member can be accessed wherever the class
+                    is accessible.
+                </p>
+
+                <pre><code>
+class Student {
+
+    public String name;
+
+}
+                </code></pre>
+
+
+                <h3>4. Default Access</h3>
+
+                <p>
+                    When no access modifier is specified, the member has
+                    default access.
+                </p>
+
+                <pre><code>
+class Student {
+
+    int age;
+
+}
+                </code></pre>
+
+
+                <h3>Other Modifiers</h3>
+
+                <p>
+                    Java also provides other modifiers that control the
+                    behavior of classes and their members.
+                </p>
+
+                <p>
+                    Examples include:
+                </p>
+
+                <ul>
+                    <li><code>static</code></li>
+                    <li><code>final</code></li>
+                    <li><code>abstract</code></li>
+                </ul>
+
+
+                <h3>Constructor</h3>
+
+                <p>
+                    A constructor is a special member of a class that is
+                    used when an object is created.
+                </p>
+
+                <p>
+                    A constructor has the same name as the class and does
+                    not have a return type.
+                </p>
+
+                <pre><code>
+class Student {
+
+    Student() {
+
+        System.out.println("Constructor called");
+
+    }
+
+}
+                </code></pre>
+
+
+                <p>
+                    Creating an object:
+                </p>
+
+                <pre><code>
+Student s = new Student();
+                </code></pre>
+
+
+                <p>
+                    When the object is created, the constructor is called.
+                </p>
+
+
+                <h3>Constructor with Parameters</h3>
+
+                <p>
+                    A constructor can also receive parameters to initialize
+                    object data.
+                </p>
+
+                <pre><code>
+class Student {
+
+    String name;
+    int age;
+
+    Student(String n, int a) {
+
+        name = n;
+        age = a;
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>finalize()</h3>
+
+                <p>
+                    The syllabus includes the <code>finalize()</code>
+                    method as part of class fundamentals.
+                </p>
+
+                <p>
+                    It is associated with an object before its memory is
+                    reclaimed by garbage collection.
+                </p>
+
+                <pre><code>
+class Student {
+
+    protected void finalize() {
+
+        System.out.println("Object finalized");
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Garbage Collection</h3>
+
+                <p>
+                    Garbage collection is the process through which Java
+                    automatically manages memory by identifying objects
+                    that are no longer needed.
+                </p>
+
+                <p>
+                    When an object is no longer reachable by the program,
+                    it may become eligible for garbage collection.
+                </p>
+
+                <pre><code>
+Student s = new Student();
+
+s = null;
+                </code></pre>
+
+                <p>
+                    After <code>s</code> is assigned <code>null</code>,
+                    the previously referenced object may become eligible
+                    for garbage collection if there are no other references
+                    to it.
+                </p>
+
+
+                <h3>Passing Parameters to Methods</h3>
+
+                <p>
+                    Parameters allow values to be passed to methods.
+                </p>
+
+                <pre><code>
+class Calculator {
+
+    int add(int a, int b) {
+
+        return a + b;
+
+    }
+
+}
+                </code></pre>
+
+
+                <p>
+                    Calling the method:
+                </p>
+
+                <pre><code>
+Calculator c = new Calculator();
+
+int result = c.add(10, 20);
+
+System.out.println(result);
+                </code></pre>
+
+
+                <p>
+                    Here, <code>10</code> and <code>20</code> are arguments
+                    passed to the method, while <code>a</code> and
+                    <code>b</code> are parameters.
+                </p>
+
+
+                <h3>Variable Hiding</h3>
+
+                <p>
+                    Variable hiding occurs when a subclass declares a
+                    variable with the same name as a variable in its
+                    superclass.
+                </p>
+
+                <pre><code>
+class A {
+
+    int number = 10;
+
+}
+
+class B extends A {
+
+    int number = 20;
+
+}
+                </code></pre>
+
+
+                <p>
+                    In this example, the variable declared in class
+                    <code>B</code> hides the variable inherited from
+                    class <code>A</code>.
+                </p>
+
+
+                <h3>Method Overloading</h3>
+
+                <p>
+                    Method overloading occurs when a class contains multiple
+                    methods with the same name but different parameter lists.
+                </p>
+
+                <p>
+                    The parameters can differ in their number or type.
+                </p>
+
+                <pre><code>
+class Calculator {
+
+    int sum(int a, int b) {
+
+        return a + b;
+
+    }
+
+    double sum(double a, double b) {
+
+        return a + b;
+
+    }
+
+}
+                </code></pre>
+
+
+                <p>
+                    Both methods are named <code>sum()</code>, but their
+                    parameter types are different.
+                </p>
+
+
+                <h3>Constructor Overloading</h3>
+
+                <p>
+                    Constructor overloading means defining multiple
+                    constructors in the same class with different
+                    parameter lists.
+                </p>
+
+                <pre><code>
+class Student {
+
+    String name;
+    int age;
+
+    Student() {
+
+        name = "Unknown";
+        age = 0;
+
+    }
+
+    Student(String n) {
+
+        name = n;
+
+    }
+
+    Student(String n, int a) {
+
+        name = n;
+        age = a;
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Constructor Chaining</h3>
+
+                <p>
+                    Constructor chaining occurs when one constructor calls
+                    another constructor.
+                </p>
+
+                <p>
+                    The <code>this()</code> keyword can be used to call
+                    another constructor of the same class.
+                </p>
+
+                <pre><code>
+class Student {
+
+    String name;
+    int age;
+
+    Student() {
+
+        this("Unknown", 0);
+
+    }
+
+    Student(String n, int a) {
+
+        name = n;
+        age = a;
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>this Keyword</h3>
+
+                <p>
+                    The <code>this</code> keyword refers to the current
+                    object.
+                </p>
+
+                <p>
+                    It can be used to distinguish instance variables from
+                    method or constructor parameters.
+                </p>
+
+                <pre><code>
+class Student {
+
+    String name;
+
+    Student(String name) {
+
+        this.name = name;
+
+    }
+
+}
+                </code></pre>
+
+
+                <p>
+                    Here, <code>this.name</code> refers to the instance
+                    variable, while <code>name</code> refers to the
+                    constructor parameter.
+                </p>
+
+
+                <h3>Static Code Block</h3>
+
+                <p>
+                    A static block is associated with the class rather than
+                    with a particular object. It is written using the
+                    <code>static</code> keyword.
+                </p>
+
+                <pre><code>
+class Demo {
+
+    static {
+
+        System.out.println("Static block executed");
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Non-static Code Block</h3>
+
+                <p>
+                    A non-static block is associated with object
+                    initialization and is executed when an object is
+                    created.
+                </p>
+
+                <pre><code>
+class Demo {
+
+    {
+
+        System.out.println("Non-static block executed");
+
+    }
+
+}
+                </code></pre>
+
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- 2. INHERITANCE -->
+            <!-- ================================================= -->
+
+            <div class="note-section">
+
+                <h2>2. Inheritance</h2>
+
+
+                <h3>What is Inheritance?</h3>
+
+                <p>
+                    Inheritance is an object-oriented programming mechanism
+                    in which one class acquires properties and methods from
+                    another class.
+                </p>
+
+                <p>
+                    The class whose members are inherited is commonly
+                    called the superclass, while the class that inherits
+                    them is called the subclass.
+                </p>
+
+
+                <h3>Inheritance Mechanism</h3>
+
+                <p>
+                    Java uses the <code>extends</code> keyword to establish
+                    inheritance between classes.
+                </p>
+
+                <pre><code>
+class A {
+
+    int number = 10;
+
+}
+
+class B extends A {
+
+    void display() {
+
+        System.out.println(number);
+
+    }
+
+}
+                </code></pre>
+
+
+                <p>
+                    Here, class <code>B</code> inherits from class
+                    <code>A</code>.
+                </p>
+
+
+                <h3>Role of Access Modifiers in Inheritance</h3>
+
+                <p>
+                    Access modifiers determine which members of a superclass
+                    can be accessed by a subclass.
+                </p>
+
+                <p>
+                    For example, private members are not directly accessible
+                    in the subclass, while accessible members can be used
+                    according to their access level.
+                </p>
+
+
+                <h3>Method Overriding</h3>
+
+                <p>
+                    Method overriding occurs when a subclass provides its
+                    own implementation of a method inherited from its
+                    superclass.
+                </p>
+
+                <pre><code>
+class A {
+
+    void display() {
+
+        System.out.println("Class A");
+
+    }
+
+}
+
+class B extends A {
+
+    void display() {
+
+        System.out.println("Class B");
+
+    }
+
+}
+                </code></pre>
+
+
+                <p>
+                    The <code>display()</code> method in class
+                    <code>B</code> overrides the method inherited from
+                    class <code>A</code>.
+                </p>
+
+
+                <h3>Variable Shadowing</h3>
+
+                <p>
+                    Variable shadowing occurs when a subclass declares a
+                    variable with the same name as a variable inherited
+                    from its superclass.
+                </p>
+
+                <pre><code>
+class A {
+
+    int number = 10;
+
+}
+
+class B extends A {
+
+    int number = 20;
+
+}
+                </code></pre>
+
+
+                <p>
+                    The variable declared in class <code>B</code> shadows
+                    the variable inherited from class <code>A</code>.
+                </p>
+
+
+                <h3>super Keyword</h3>
+
+                <p>
+                    The <code>super</code> keyword is used to refer to
+                    members of the superclass.
+                </p>
+
+                <p>
+                    It can be used to access a superclass variable,
+                    superclass method, or superclass constructor.
+                </p>
+
+                <h3>Accessing Superclass Variable</h3>
+
+                <pre><code>
+class A {
+
+    int number = 10;
+
+}
+
+class B extends A {
+
+    int number = 20;
+
+    void display() {
+
+        System.out.println(super.number);
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Calling Superclass Method</h3>
+
+                <pre><code>
+class A {
+
+    void display() {
+
+        System.out.println("Class A");
+
+    }
+
+}
+
+class B extends A {
+
+    void display() {
+
+        super.display();
+
+        System.out.println("Class B");
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Polymorphism</h3>
+
+                <p>
+                    Polymorphism means the ability of an object or reference
+                    to take different forms.
+                </p>
+
+                <p>
+                    The syllabus covers:
+                </p>
+
+                <ul>
+                    <li>Early binding</li>
+                    <li>Late binding</li>
+                </ul>
+
+
+                <h3>Early Binding</h3>
+
+                <p>
+                    Early binding refers to method selection that is
+                    determined earlier, such as during compilation.
+                </p>
+
+                <p>
+                    Method overloading is an example associated with
+                    compile-time method selection.
+                </p>
+
+
+                <h3>Late Binding</h3>
+
+                <p>
+                    Late binding refers to method selection that is
+                    determined at runtime.
+                </p>
+
+                <p>
+                    Method overriding is associated with runtime
+                    polymorphism.
+                </p>
+
+                <pre><code>
+class A {
+
+    void display() {
+
+        System.out.println("A");
+
+    }
+
+}
+
+class B extends A {
+
+    void display() {
+
+        System.out.println("B");
+
+    }
+
+}
+
+class Main {
+
+    public static void main(String[] args) {
+
+        A obj = new B();
+
+        obj.display();
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Abstract Class</h3>
+
+                <p>
+                    An abstract class is a class that is declared using
+                    the <code>abstract</code> keyword.
+                </p>
+
+                <p>
+                    It can contain abstract methods as well as other
+                    class members.
+                </p>
+
+                <pre><code>
+abstract class Animal {
+
+    abstract void sound();
+
+}
+                </code></pre>
+
+
+                <p>
+                    A subclass can provide the implementation of an
+                    abstract method.
+                </p>
+
+                <pre><code>
+class Dog extends Animal {
+
+    void sound() {
+
+        System.out.println("Dog barks");
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Interface</h3>
+
+                <p>
+                    An interface provides a way to define a contract that
+                    implementing classes follow.
+                </p>
+
+                <p>
+                    Java classes can implement interfaces using the
+                    <code>implements</code> keyword.
+                </p>
+
+
+                <h3>Components of Interface Declaration</h3>
+
+                <p>
+                    A basic interface declaration can contain the interface
+                    name and its members.
+                </p>
+
+                <pre><code>
+interface Animal {
+
+    void sound();
+
+}
+                </code></pre>
+
+
+                <h3>Implementing an Interface</h3>
+
+                <p>
+                    A class implements an interface using the
+                    <code>implements</code> keyword.
+                </p>
+
+                <pre><code>
+interface Animal {
+
+    void sound();
+
+}
+
+class Dog implements Animal {
+
+    public void sound() {
+
+        System.out.println("Dog barks");
+
+    }
+
+}
+                </code></pre>
+
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- 3. EXCEPTION HANDLING -->
+            <!-- ================================================= -->
+
+            <div class="note-section">
+
+                <h2>3. Exception Handling</h2>
+
+
+                <h3>What is an Exception?</h3>
+
+                <p>
+                    An exception represents an abnormal condition that
+                    occurs during the execution of a program.
+                </p>
+
+                <p>
+                    Java provides an exception handling mechanism that
+                    allows a program to detect and handle such conditions.
+                </p>
+
+
+                <h3>Exception Object</h3>
+
+                <p>
+                    In Java, an exception is represented by an object.
+                    The object contains information about the exceptional
+                    condition.
+                </p>
+
+
+                <h3>Throwing an Exception</h3>
+
+                <p>
+                    An exception can be generated during program execution.
+                    Java provides mechanisms for throwing and handling
+                    exceptions.
+                </p>
+
+
+                <h3>Exception Handler</h3>
+
+                <p>
+                    An exception handler is code that handles an exception
+                    after it occurs.
+                </p>
+
+                <p>
+                    Java commonly uses the <code>try</code>,
+                    <code>catch</code> and <code>finally</code> statements
+                    for exception handling.
+                </p>
+
+
+                <h3>Catch or Specify Policy</h3>
+
+                <p>
+                    When a method can produce an exception, the exception
+                    must be handled or specified according to Java's
+                    exception handling mechanism.
+                </p>
+
+
+                <h3>Types of Exceptions</h3>
+
+                <p>
+                    The syllabus classifies exceptions in two ways:
+                </p>
+
+                <ul>
+                    <li>Checked and Unchecked Exceptions</li>
+                    <li>Built-in and User-defined Exceptions</li>
+                </ul>
+
+
+                <h3>Checked Exceptions</h3>
+
+                <p>
+                    Checked exceptions are exceptions that are checked by
+                    the compiler and generally need to be handled or
+                    specified.
+                </p>
+
+
+                <h3>Unchecked Exceptions</h3>
+
+                <p>
+                    Unchecked exceptions are associated with runtime
+                    conditions and are not required to be handled in
+                    the same way as checked exceptions.
+                </p>
+
+
+                <h3>Built-in Exceptions</h3>
+
+                <p>
+                    Java provides predefined exception classes for
+                    different exceptional situations.
+                </p>
+
+                <p>
+                    Examples include:
+                </p>
+
+                <ul>
+                    <li><code>ArithmeticException</code></li>
+                    <li><code>NullPointerException</code></li>
+                    <li><code>ArrayIndexOutOfBoundsException</code></li>
+                </ul>
+
+
+                <h3>User-defined Exceptions</h3>
+
+                <p>
+                    Java allows programmers to create custom exception
+                    classes for application-specific situations.
+                </p>
+
+
+                <h3>try-catch</h3>
+
+                <p>
+                    The <code>try</code> block contains code that may
+                    produce an exception, while the <code>catch</code>
+                    block handles the exception.
+                </p>
+
+                <pre><code>
+try {
+
+    int result = 10 / 0;
+
+}
+catch (ArithmeticException e) {
+
+    System.out.println("Cannot divide by zero");
+
+}
+                </code></pre>
+
+
+                <h3>finally</h3>
+
+                <p>
+                    The <code>finally</code> block is used with exception
+                    handling and is used for code that should execute
+                    after the try/catch processing.
+                </p>
+
+                <pre><code>
+try {
+
+    int result = 10 / 2;
+
+}
+catch (ArithmeticException e) {
+
+    System.out.println("Exception occurred");
+
+}
+finally {
+
+    System.out.println("Finally block");
+
+}
+                </code></pre>
+
+
+                <h3>throws Keyword</h3>
+
+                <p>
+                    The <code>throws</code> keyword is used in a method
+                    declaration to specify exceptions that the method
+                    may throw.
+                </p>
+
+                <pre><code>
+void readFile() throws Exception {
+
+    // code
+
+}
+                </code></pre>
+
+
+                <p>
+                    The method does not necessarily handle the exception
+                    itself. It specifies the exception so that the caller
+                    can handle it.
+                </p>
+
+
+                <h3>throw Keyword</h3>
+
+                <p>
+                    The <code>throw</code> keyword is used to manually
+                    throw an exception.
+                </p>
+
+                <pre><code>
+class Test {
+
+    static void check(int age) {
+
+        if (age &lt; 18) {
+
+            throw new ArithmeticException("Age is less than 18");
+
+        }
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Custom Exception</h3>
+
+                <p>
+                    A custom exception is an exception created by the
+                    programmer for a particular application requirement.
+                </p>
+
+                <pre><code>
+class AgeException extends Exception {
+
+    AgeException(String message) {
+
+        super(message);
+
+    }
+
+}
+                </code></pre>
+
+
+                <p>
+                    The custom exception can then be used in a program.
+                </p>
+
+                <pre><code>
+class Test {
+
+    static void checkAge(int age) throws AgeException {
+
+        if (age &lt; 18) {
+
+            throw new AgeException("Age must be 18 or above");
+
+        }
+
+    }
+
+}
+                </code></pre>
+
+
+                <h3>Chained Exceptions</h3>
+
+                <p>
+                    Chained exceptions allow one exception to be associated
+                    with another exception.
+                </p>
+
+                <p>
+                    This can be useful when one exception occurs because
+                    of another underlying exception.
+                </p>
+
+                <pre><code>
+try {
+
+    try {
+
+        int x = 10 / 0;
+
+    }
+    catch (ArithmeticException e) {
+
+        throw new Exception("Another exception", e);
+
+    }
+
+}
+catch (Exception e) {
+
+    System.out.println(e);
+
+}
+                </code></pre>
+
+
+                <h3>Complete Exception Handling Example</h3>
+
+                <pre><code>
+class Division {
+
+    static int divide(int a, int b) {
+
+        return a / b;
+
+    }
+
+    public static void main(String[] args) {
+
+        try {
+
+            int result = divide(10, 0);
+
+            System.out.println(result);
+
+        }
+        catch (ArithmeticException e) {
+
+            System.out.println("Cannot divide by zero");
+
+        }
+        finally {
+
+            System.out.println("Program completed");
+
+        }
+
+    }
+
+}
+                </code></pre>
+
+
+            </div>
+
+
+            <!-- ================================================= -->
+            <!-- QUICK REVISION -->
+            <!-- ================================================= -->
+
+            <div class="note-section">
+
+                <h2>Quick Revision</h2>
+
+
+                <h3>Class Fundamentals</h3>
+
+                <ul>
+                    <li>Class structure</li>
+                    <li>Variables and methods</li>
+                    <li>Access modifiers</li>
+                    <li>Other modifiers</li>
+                    <li>Constructors</li>
+                    <li>finalize()</li>
+                    <li>Garbage collection</li>
+                    <li>Passing parameters to methods</li>
+                    <li>Variable hiding</li>
+                    <li>Method overloading</li>
+                    <li>Constructor overloading</li>
+                    <li>Constructor chaining</li>
+                    <li>this keyword</li>
+                    <li>Static and non-static code blocks</li>
+                </ul>
+
+
+                <h3>Inheritance</h3>
+
+                <ul>
+                    <li>Inheritance mechanism</li>
+                    <li>Role of access modifiers</li>
+                    <li>Method overriding</li>
+                    <li>Variable shadowing</li>
+                    <li>super keyword</li>
+                    <li>Polymorphism</li>
+                    <li>Early binding</li>
+                    <li>Late binding</li>
+                    <li>Abstract class</li>
+                    <li>Interface</li>
+                    <li>Implementing interfaces</li>
+                </ul>
+
+
+                <h3>Exception Handling</h3>
+
+                <ul>
+                    <li>Exception object</li>
+                    <li>Throwing an exception</li>
+                    <li>Exception handler</li>
+                    <li>Catch or specify policy</li>
+                    <li>Checked exceptions</li>
+                    <li>Unchecked exceptions</li>
+                    <li>Built-in exceptions</li>
+                    <li>User-defined exceptions</li>
+                    <li>try-catch-finally</li>
+                    <li>throws</li>
+                    <li>throw</li>
+                    <li>Custom exceptions</li>
+                    <li>Chained exceptions</li>
+                </ul>
+
+            </div>
+
+
+        </section>
+
+        <div class="unit-navigation">
+
+    <a href="unit1-java.html">← Previous Unit</a>
+
+    <a href="java-programming.html">Back to Java</a>
+
+    <a href="#">Next Unit →</a>
+
+</div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Java Programming Unit 3 | MCA Study Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            MCA Study Hub
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="notes.html">Notes</a>
+
+            <a href="semester1-notes.html">Semester 1</a>
+
+            <a href="java-programming.html">Java</a>
+
+        </div>
+
+    </nav>
+
+
+    <main>
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+
+            <h1>Java Programming - Unit 3</h1>
+
+            <p>
+                Advanced Java Concepts
+            </p>
+
+        </section>
+
+
+        <!-- Notes -->
+
+        <div class="notes-content">
+
+
+            <!-- ===================================== -->
+            <!-- PACKAGES -->
+            <!-- ===================================== -->
+
+            <div class="note-section">
+
+                <h2>1. Packages</h2>
+
+                <p>
+                    A package in Java is a collection of related classes,
+                    interfaces and other components. Packages help organize
+                    Java programs and provide a way to manage classes.
+                </p>
+
+                <h3>Creating a Package</h3>
+
+                <p>
+                    A package can be created using the
+                    <code>package</code> keyword.
+                </p>
+
+                <pre><code>package mypackage;
+
+public class Student {
+
+    public void display() {
+        System.out.println("Student class");
+    }
+
+}</code></pre>
+
+                <p>
+                    Here, <code>mypackage</code> is the package name and
+                    <code>Student</code> belongs to that package.
+                </p>
+
+
+                <h3>Importing a Package</h3>
+
+                <p>
+                    The <code>import</code> keyword is used to access classes
+                    from another package.
+                </p>
+
+                <pre><code>import mypackage.Student;
+
+class Test {
+
+    public static void main(String[] args) {
+
+        Student s = new Student();
+
+        s.display();
+    }
+}</code></pre>
+
+
+                <h3>Importing Multiple Classes</h3>
+
+                <p>
+                    Individual classes can be imported from a package.
+                </p>
+
+                <pre><code>import java.util.Scanner;
+import java.util.ArrayList;</code></pre>
+
+
+                <h3>Importing All Classes from a Package</h3>
+
+                <p>
+                    The <code>*</code> symbol can be used to import all
+                    accessible classes from a package.
+                </p>
+
+                <pre><code>import java.util.*;</code></pre>
+
+
+                <h3>CLASSPATH Variable</h3>
+
+                <p>
+                    The <code>CLASSPATH</code> variable tells Java where to
+                    search for classes and packages when compiling or
+                    executing a Java program.
+                </p>
+
+                <p>
+                    It can contain directories and JAR files where Java
+                    classes are located.
+                </p>
+
+
+                <h3>static Import</h3>
+
+                <p>
+                    Static import allows static members of a class to be
+                    used without writing the class name every time.
+                </p>
+
+                <pre><code>import static java.lang.Math.*;
+
+class Demo {
+
+    public static void main(String[] args) {
+
+        System.out.println(sqrt(25));
+        System.out.println(pow(2, 3));
+
+    }
+}</code></pre>
+
+                <p>
+                    Without static import, we normally write:
+                </p>
+
+                <pre><code>System.out.println(Math.sqrt(25));
+System.out.println(Math.pow(2, 3));</code></pre>
+
+            </div>
+
+
+
+            <!-- ===================================== -->
+            <!-- STRINGS -->
+            <!-- ===================================== -->
+
+            <div class="note-section">
+
+                <h2>2. Strings</h2>
+
+                <p>
+                    A String represents a sequence of characters.
+                    Java provides the <code>String</code> class for working
+                    with text.
+                </p>
+
+
+                <h3>Creating Strings</h3>
+
+                <p>
+                    Strings can be created using a string literal.
+                </p>
+
+                <pre><code>String name = "Irfan";</code></pre>
+
+                <p>
+                    A String object can also be created using the
+                    <code>new</code> keyword.
+                </p>
+
+                <pre><code>String name = new String("Irfan");</code></pre>
+
+
+                <h3>Mutable and Immutable Strings</h3>
+
+                <p>
+                    A String object in Java is immutable. This means that
+                    once a String object is created, its content cannot
+                    be changed.
+                </p>
+
+                <pre><code>String name = "Java";
+
+name = name + " Programming";</code></pre>
+
+                <p>
+                    In this example, the original String object is not
+                    modified. A new String is created.
+                </p>
+
+
+                <h3>String Operations</h3>
+
+                <p>
+                    Java provides several methods for performing operations
+                    on strings.
+                </p>
+
+
+                <h3>length()</h3>
+
+                <pre><code>String text = "Java";
+
+System.out.println(text.length());</code></pre>
+
+                <p>
+                    Output:
+                </p>
+
+                <pre><code>4</code></pre>
+
+
+                <h3>charAt()</h3>
+
+                <pre><code>String text = "Java";
+
+System.out.println(text.charAt(0));</code></pre>
+
+                <p>
+                    Output:
+                </p>
+
+                <pre><code>J</code></pre>
+
+
+                <h3>concat()</h3>
+
+                <pre><code>String first = "Java";
+String second = "Programming";
+
+String result = first.concat(" " + second);
+
+System.out.println(result);</code></pre>
+
+                <p>
+                    Output:
+                </p>
+
+                <pre><code>Java Programming</code></pre>
+
+
+                <h3>toUpperCase() and toLowerCase()</h3>
+
+                <pre><code>String text = "Java Programming";
+
+System.out.println(text.toUpperCase());
+
+System.out.println(text.toLowerCase());</code></pre>
+
+
+                <h3>equals()</h3>
+
+                <p>
+                    The <code>equals()</code> method compares the contents
+                    of two strings.
+                </p>
+
+                <pre><code>String a = "Java";
+String b = "Java";
+
+System.out.println(a.equals(b));</code></pre>
+
+                <p>
+                    Output:
+                </p>
+
+                <pre><code>true</code></pre>
+
+
+                <h3>StringBuilder</h3>
+
+                <p>
+                    <code>StringBuilder</code> is used when we need to
+                    modify strings frequently. Unlike String, it is mutable.
+                </p>
+
+                <pre><code>StringBuilder text = new StringBuilder("Java");
+
+text.append(" Programming");
+
+System.out.println(text);</code></pre>
+
+                <p>
+                    Output:
+                </p>
+
+                <pre><code>Java Programming</code></pre>
+
+
+                <h3>StringBuffer</h3>
+
+                <p>
+                    <code>StringBuffer</code> is another mutable character
+                    sequence. It provides methods for modifying text.
+                </p>
+
+                <pre><code>StringBuffer text = new StringBuffer("Java");
+
+text.append(" Programming");
+
+System.out.println(text);</code></pre>
+
+            </div>
+
+
+
+            <!-- ===================================== -->
+            <!-- THREADS -->
+            <!-- ===================================== -->
+
+            <div class="note-section">
+
+                <h2>3. Threads</h2>
+
+                <p>
+                    A thread is a lightweight unit of execution inside a
+                    program. Threads allow different tasks to execute
+                    concurrently.
+                </p>
+
+
+                <h3>Creating Threads in Java</h3>
+
+                <p>
+                    One common way to create a thread is by extending the
+                    <code>Thread</code> class.
+                </p>
+
+                <pre><code>class MyThread extends Thread {
+
+    public void run() {
+
+        System.out.println("Thread is running");
+
+    }
+}
+
+class Demo {
+
+    public static void main(String[] args) {
+
+        MyThread t = new MyThread();
+
+        t.start();
+
+    }
+}</code></pre>
+
+
+                <h3>Using Runnable</h3>
+
+                <p>
+                    Another way of creating a thread is by implementing
+                    the <code>Runnable</code> interface.
+                </p>
+
+                <pre><code>class MyTask implements Runnable {
+
+    public void run() {
+
+        System.out.println("Thread is running");
+
+    }
+}
+
+class Demo {
+
+    public static void main(String[] args) {
+
+        MyTask task = new MyTask();
+
+        Thread t = new Thread(task);
+
+        t.start();
+
+    }
+}</code></pre>
+
+
+                <h3>Thread Lifecycle</h3>
+
+                <p>
+                    A thread passes through different states during its
+                    lifetime.
+                </p>
+
+                <pre><code>
+        NEW
+         |
+         ↓
+      RUNNABLE
+         |
+         ↓
+       RUNNING
+       /     \
+      ↓       ↓
+  WAITING   BLOCKED
+      \       /
+       \     /
+        ↓   ↓
+      RUNNABLE
+         |
+         ↓
+    TERMINATED
+                </code></pre>
+
+                <p>
+                    Important thread states include:
+                </p>
+
+                <ul>
+
+                    <li><strong>New</strong> - Thread object has been created but has not started.</li>
+
+                    <li><strong>Runnable</strong> - Thread is ready to run.</li>
+
+                    <li><strong>Running</strong> - Thread is executing.</li>
+
+                    <li><strong>Blocked</strong> - Thread is waiting to acquire a lock.</li>
+
+                    <li><strong>Waiting</strong> - Thread is waiting for another thread.</li>
+
+                    <li><strong>Terminated</strong> - Thread has completed execution.</li>
+
+                </ul>
+
+
+                <h3>Multithreading in Java</h3>
+
+                <p>
+                    Multithreading means executing multiple threads within
+                    the same program.
+                </p>
+
+                <pre><code>class Task extends Thread {
+
+    public void run() {
+
+        for(int i = 1; i <= 5; i++) {
+
+            System.out.println(i);
+
+        }
+
+    }
+}
+
+class Demo {
+
+    public static void main(String[] args) {
+
+        Task t1 = new Task();
+        Task t2 = new Task();
+
+        t1.start();
+        t2.start();
+
+    }
+}</code></pre>
+
+
+                <h3>Synchronization</h3>
+
+                <p>
+                    Synchronization is used when multiple threads access
+                    shared data. It helps prevent multiple threads from
+                    modifying the same critical section at the same time.
+                </p>
+
+                <pre><code>class Counter {
+
+    int count = 0;
+
+    synchronized void increment() {
+
+        count++;
+
+    }
+}</code></pre>
+
+
+                <h3>Inter-Process Communication (IPC) in Threads</h3>
+
+                <p>
+                    Threads can communicate with each other when working
+                    with shared resources. Java provides mechanisms such
+                    as <code>wait()</code>, <code>notify()</code> and
+                    <code>notifyAll()</code> for thread communication.
+                </p>
+
+                <pre><code>class Shared {
+
+    synchronized void waitForTask() {
+
+        try {
+
+            wait();
+
+        } catch (InterruptedException e) {
+
+            System.out.println(e);
+
+        }
+
+    }
+
+    synchronized void completeTask() {
+
+        notify();
+
+    }
+}</code></pre>
+
+            </div>
+
+
+
+            <!-- ===================================== -->
+            <!-- I/O STREAMS -->
+            <!-- ===================================== -->
+
+            <div class="note-section">
+
+                <h2>4. I/O Streams</h2>
+
+                <p>
+                    Java I/O (Input/Output) provides classes and interfaces
+                    for reading data from sources and writing data to
+                    destinations.
+                </p>
+
+
+                <h3>Types of I/O Streams</h3>
+
+                <p>
+                    The syllabus covers the following streams:
+                </p>
+
+                <ul>
+
+                    <li>Byte Streams</li>
+
+                    <li>Character Streams</li>
+
+                    <li>Buffered Streams</li>
+
+                    <li>Data Streams</li>
+
+                    <li>Object Streams</li>
+
+                    <li>Standard Streams</li>
+
+                </ul>
+
+
+                <h3>Byte Streams</h3>
+
+                <p>
+                    Byte streams are used for handling data in the form
+                    of bytes. Important classes include
+                    <code>InputStream</code> and <code>OutputStream</code>.
+                </p>
+
+                <pre><code>FileInputStream input =
+    new FileInputStream("input.txt");
+
+int data;
+
+while((data = input.read()) != -1) {
+
+    System.out.print((char)data);
+
+}
+
+input.close();</code></pre>
+
+
+                <h3>Character Streams</h3>
+
+                <p>
+                    Character streams are designed for handling character
+                    data. Important classes include
+                    <code>Reader</code> and <code>Writer</code>.
+                </p>
+
+                <pre><code>FileReader reader =
+    new FileReader("input.txt");
+
+int data;
+
+while((data = reader.read()) != -1) {
+
+    System.out.print((char)data);
+
+}
+
+reader.close();</code></pre>
+
+
+                <h3>Buffered Streams</h3>
+
+                <p>
+                    Buffered streams use a buffer to improve input and
+                    output performance.
+                </p>
+
+                <pre><code>BufferedReader reader =
+    new BufferedReader(
+        new FileReader("input.txt")
+    );
+
+String line;
+
+while((line = reader.readLine()) != null) {
+
+    System.out.println(line);
+
+}
+
+reader.close();</code></pre>
+
+
+                <h3>Data Streams</h3>
+
+                <p>
+                    Data streams allow Java primitive data types to be
+                    read and written in a machine-independent manner.
+                </p>
+
+                <pre><code>DataOutputStream output =
+    new DataOutputStream(
+        new FileOutputStream("data.dat")
+    );
+
+output.writeInt(100);
+output.writeDouble(25.5);
+
+output.close();</code></pre>
+
+
+                <h3>Object Streams</h3>
+
+                <p>
+                    Object streams are used to read and write objects.
+                    They are commonly used with object serialization.
+                </p>
+
+                <pre><code>ObjectOutputStream output =
+    new ObjectOutputStream(
+        new FileOutputStream("student.dat")
+    );
+
+output.writeObject(student);
+
+output.close();</code></pre>
+
+
+                <h3>Standard Streams</h3>
+
+                <p>
+                    Java provides three standard streams:
+                </p>
+
+                <ul>
+
+                    <li><code>System.in</code> - Standard input</li>
+
+                    <li><code>System.out</code> - Standard output</li>
+
+                    <li><code>System.err</code> - Standard error</li>
+
+                </ul>
+
+                <pre><code>System.out.println("Hello Java");
+
+System.err.println("Error message");</code></pre>
+
+
+                <h3>File I/O Basics</h3>
+
+                <p>
+                    File I/O allows Java programs to read data from files
+                    and write data to files.
+                </p>
+
+
+                <h3>Writing to a File</h3>
+
+                <pre><code>FileWriter writer =
+    new FileWriter("output.txt");
+
+writer.write("Hello Java");
+
+writer.close();</code></pre>
+
+
+                <h3>Reading from a File</h3>
+
+                <pre><code>FileReader reader =
+    new FileReader("output.txt");
+
+int data;
+
+while((data = reader.read()) != -1) {
+
+    System.out.print((char)data);
+
+}
+
+reader.close();</code></pre>
+
+
+                <h3>Serializing Objects</h3>
+
+                <p>
+                    Serialization is the process of converting an object
+                    into a byte stream so that it can be stored or
+                    transmitted.
+                </p>
+
+                <p>
+                    A class whose objects need to be serialized generally
+                    implements the <code>Serializable</code> interface.
+                </p>
+
+                <pre><code>import java.io.Serializable;
+
+class Student implements Serializable {
+
+    String name;
+    int age;
+
+}</code></pre>
+
+
+                <p>
+                    The object can then be written using
+                    <code>ObjectOutputStream</code>.
+                </p>
+
+                <pre><code>ObjectOutputStream output =
+    new ObjectOutputStream(
+        new FileOutputStream("student.dat")
+    );
+
+output.writeObject(student);
+
+output.close();</code></pre>
+
+
+                <h3>Deserializing an Object</h3>
+
+                <p>
+                    Deserialization is the process of reconstructing an
+                    object from a byte stream.
+                </p>
+
+                <pre><code>ObjectInputStream input =
+    new ObjectInputStream(
+        new FileInputStream("student.dat")
+    );
+
+Student s =
+    (Student) input.readObject();
+
+input.close();</code></pre>
+
+            </div>
+
+
+
+            <!-- ===================================== -->
+            <!-- QUICK REVISION -->
+            <!-- ===================================== -->
+
+            <div class="note-section">
+
+                <h2>Unit 3 Quick Revision</h2>
+
+                <h3>Packages</h3>
+
+                <ul>
+
+                    <li>Creating packages</li>
+
+                    <li>Importing packages</li>
+
+                    <li>CLASSPATH variable</li>
+
+                    <li>Static import</li>
+
+                </ul>
+
+
+                <h3>Strings</h3>
+
+                <ul>
+
+                    <li>Mutable and immutable strings</li>
+
+                    <li>Creating strings</li>
+
+                    <li>String operations</li>
+
+                </ul>
+
+
+                <h3>Threads</h3>
+
+                <ul>
+
+                    <li>Creating threads</li>
+
+                    <li>Thread lifecycle</li>
+
+                    <li>Multithreading</li>
+
+                    <li>Synchronization</li>
+
+                    <li>Inter-process communication (IPC) in threads</li>
+
+                </ul>
+
+
+                <h3>I/O Streams</h3>
+
+                <ul>
+
+                    <li>Byte streams</li>
+
+                    <li>Character streams</li>
+
+                    <li>Buffered streams</li>
+
+                    <li>Data streams</li>
+
+                    <li>Object streams</li>
+
+                    <li>Standard streams</li>
+
+                    <li>File I/O</li>
+
+                    <li>Reading and writing files</li>
+
+                    <li>Object serialization</li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- Unit Navigation -->
+
+        <div class="unit-navigation">
+
+            <a href="unit2-java.html">
+                ← Previous Unit
+            </a>
+
+            <a href="java-programming.html">
+                Back to Java
+            </a>
+
+            <a href="unit4-java.html">
+                Next Unit →
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
